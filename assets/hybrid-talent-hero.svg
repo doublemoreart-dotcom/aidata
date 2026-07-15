@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+  <title id="title">重構人才定義主視覺</title>
+  <desc id="desc">以中心節點連接多個職能模組，表達混合型人才重新編排設計、產品、工程與行銷流程。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfbf7"/>
+      <stop offset="0.55" stop-color="#eff6f2"/>
+      <stop offset="1" stop-color="#eef3fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#24312c" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="420" rx="34" fill="url(#bg)"/>
+  <g opacity="0.36" stroke="#d9ded8" stroke-width="1">
+    <path d="M80 0v420M160 0v420M240 0v420M320 0v420M400 0v420M480 0v420M560 0v420M640 0v420M720 0v420M800 0v420M880 0v420M960 0v420M1040 0v420M1120 0v420M1200 0v420M1280 0v420M1360 0v420"/>
+    <path d="M0 70h1440M0 140h1440M0 210h1440M0 280h1440M0 350h1440"/>
+  </g>
+  <circle cx="1190" cy="86" r="112" fill="#b7d8f0" opacity="0.32"/>
+  <circle cx="175" cy="322" r="136" fill="#bde7d3" opacity="0.34"/>
+  <circle cx="760" cy="78" r="82" fill="#f4c7b0" opacity="0.34"/>
+  <g filter="url(#shadow)">
+    <rect x="176" y="70" width="1088" height="280" rx="30" fill="#ffffff" stroke="#e3e1d8"/>
+    <g stroke="#cfd7d1" stroke-width="5" stroke-linecap="round" opacity="0.72">
+      <path d="M720 210L420 132"/>
+      <path d="M720 210L1020 132"/>
+      <path d="M720 210L420 288"/>
+      <path d="M720 210L1020 288"/>
+      <path d="M720 210L720 104"/>
+      <path d="M720 210L720 316"/>
+    </g>
+    <g opacity="0.8">
+      <path d="M420 132C514 90 620 126 720 210S924 330 1020 288" fill="none" stroke="#378add" stroke-width="4" stroke-linecap="round" opacity="0.28"/>
+      <path d="M420 288C540 322 604 274 720 210S916 96 1020 132" fill="none" stroke="#1d9e75" stroke-width="4" stroke-linecap="round" opacity="0.24"/>
+    </g>
+    <circle cx="720" cy="210" r="66" fill="#f8faf6" stroke="#d8ddd4" stroke-width="3"/>
+    <circle cx="720" cy="210" r="38" fill="#378add" opacity="0.9"/>
+    <circle cx="720" cy="210" r="14" fill="#ffffff"/>
+    <g>
+      <rect x="312" y="88" width="216" height="88" rx="24" fill="#eef5fb" stroke="#dbe7f0"/>
+      <circle cx="376" cy="132" r="26" fill="#378add" opacity="0.9"/>
+      <rect x="424" y="112" width="54" height="12" rx="6" fill="#b8cee2"/>
+      <rect x="424" y="140" width="78" height="12" rx="6" fill="#d0dde8"/>
+    </g>
+    <g>
+      <rect x="912" y="88" width="216" height="88" rx="24" fill="#edf7f2" stroke="#d9e8df"/>
+      <circle cx="976" cy="132" r="26" fill="#1d9e75" opacity="0.86"/>
+      <path d="M1020 148l28-32 26 18 24-34" fill="none" stroke="#89bea7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <rect x="312" y="244" width="216" height="88" rx="24" fill="#fff1e8" stroke="#eadbcc"/>
+      <circle cx="376" cy="288" r="26" fill="#d85a30" opacity="0.84"/>
+      <rect x="424" y="266" width="74" height="12" rx="6" fill="#e7c7b6"/>
+      <rect x="424" y="294" width="52" height="12" rx="6" fill="#e0bda9"/>
+    </g>
+    <g>
+      <rect x="912" y="244" width="216" height="88" rx="24" fill="#f7edf2" stroke="#ead8e2"/>
+      <circle cx="976" cy="288" r="26" fill="#d4537e" opacity="0.82"/>
+      <path d="M1026 288h70M1061 253v70" stroke="#d7a8bd" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g opacity="0.8">
+      <circle cx="720" cy="104" r="22" fill="#1d9e75"/>
+      <circle cx="720" cy="316" r="22" fill="#d85a30"/>
+      <circle cx="590" cy="210" r="18" fill="#d4537e"/>
+      <circle cx="850" cy="210" r="18" fill="#378add"/>
+    </g>
+  </g>
+</svg>
