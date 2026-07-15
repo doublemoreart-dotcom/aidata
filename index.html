@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI 對產業的數據觀察</title>
 <meta name="description" content="以單頁資料視覺化分析 AI 對各大產業的滲透率、投資強度、生產力影響，以及混合型人才如何重組職能系統。">
-<meta name="page-version-date" content="2026-07-13">
-<meta name="page-version-number" content="v2026.07.13-1">
+<meta name="page-version-date" content="2026-07-14">
+<meta name="page-version-number" content="v2026.07.14-1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI 對各大產業的滲透率與實際影響">
 <meta property="og:description" content="從產業採用率、投資強度、生產力提升，到混合型人才如何重組設計、產品、工程、行銷與商業流程。">
@@ -53,6 +53,40 @@ button, select { font-family: inherit; }
   padding: clamp(24px, 5vw, 56px) 0;
   font-size: calc(1rem * var(--page-font-scale));
 }
+.hero-visual {
+  width: 100%;
+  margin: 0 0 clamp(22px, 4vw, 36px);
+  border: 0.5px solid var(--page-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--page-surface-alt);
+}
+.hero-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1440 / 520;
+  object-fit: cover;
+}
+.hero-visual .hero-visual-image-dark { display: none; }
+:root[data-theme="dark"] .hero-visual .hero-visual-image-light { display: none; }
+:root[data-theme="dark"] .hero-visual .hero-visual-image-dark { display: block; }
+.section-visual {
+  width: 100%;
+  margin: 0 0 clamp(18px, 3vw, 28px);
+  border: 0.5px solid var(--page-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--page-surface-alt);
+}
+.section-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1440 / 420;
+  object-fit: cover;
+}
+.section-visual .section-visual-image-dark { display: none; }
+:root[data-theme="dark"] .section-visual .section-visual-image-light { display: none; }
+:root[data-theme="dark"] .section-visual .section-visual-image-dark { display: block; }
 .page-title {
   color: var(--page-text);
   font-size: calc(clamp(28px, 4vw, 44px) * var(--page-font-scale));
@@ -1053,6 +1087,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 .divider { border: none; border-top: 0.5px solid var(--page-border); margin: 0 0 1.25rem; }
 @media (max-width: 720px) {
   .wrap { width: min(100% - 32px, 1040px); padding: 24px 0 36px; }
+  .hero-visual { border-radius: 12px; margin-bottom: 20px; }
+  .hero-visual img { aspect-ratio: 16 / 9; }
+  .section-visual { border-radius: 10px; margin-bottom: 18px; }
+  .section-visual img { aspect-ratio: 16 / 9; }
   .reader-controls { align-items: flex-start; }
   .section-tabs {
     align-items: center;
@@ -1091,6 +1129,11 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 <body>
 
 <div class="wrap">
+
+<figure class="hero-visual" aria-label="AI 產業數據觀察主視覺">
+  <img class="hero-visual-image-light" src="assets/ai-industry-data-observation-hero.svg" alt="以產業節點、泡泡圖與趨勢線組成的 AI 產業數據觀察主視覺">
+  <img class="hero-visual-image-dark" src="assets/ai-industry-data-observation-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 
 <h1 class="page-title">AI 對產業的數據觀察</h1>
 
@@ -1250,6 +1293,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 </section>
 
 <section class="analysis-section" id="industry-adoption" aria-labelledby="industry-adoption-title">
+<figure class="section-visual" aria-label="各產業 AI 滲透率主視覺">
+  <img class="section-visual-image-light" src="assets/industry-adoption-hero.svg" alt="以水平長條與排序控制呈現各產業 AI 滲透率差異的主視覺">
+  <img class="section-visual-image-dark" src="assets/industry-adoption-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text">
     <h2 class="section-title" id="industry-adoption-title"><span class="section-title-icon" aria-hidden="true">bar_chart</span>各產業 AI 滲透率</h2>
@@ -1270,6 +1317,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 
 <section class="analysis-section" id="investment-productivity" aria-labelledby="investment-productivity-title">
 <hr class="divider">
+<figure class="section-visual" aria-label="AI 投資規模與生產力提升預估主視覺">
+  <img class="section-visual-image-light" src="assets/investment-productivity-hero.svg" alt="以泡泡散點圖呈現 AI 投資強度、生產力提升潛力與市場規模關係的主視覺">
+  <img class="section-visual-image-dark" src="assets/investment-productivity-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text section-heading-text-wide">
     <h2 class="section-title" id="investment-productivity-title"><span class="section-title-icon" aria-hidden="true">bubble_chart</span>AI 投資規模 vs. 生產力提升預估</h2>
@@ -1303,6 +1354,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 
 <section class="analysis-section" id="industry-impact" aria-labelledby="industry-impact-title">
 <hr class="divider">
+<figure class="section-visual" aria-label="各產業 AI 應用實際影響主視覺">
+  <img class="section-visual-image-light" src="assets/industry-impact-hero.svg" alt="以產業卡片、工作流節點與成效指標呈現各產業 AI 應用實際影響的主視覺">
+  <img class="section-visual-image-dark" src="assets/industry-impact-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text section-heading-text-wide">
     <h2 class="section-title" id="industry-impact-title"><span class="section-title-icon" aria-hidden="true">workspaces</span>各產業 AI 應用實際影響</h2>
@@ -1322,6 +1377,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 
 <section class="analysis-section" id="adoption-stages" aria-labelledby="adoption-stages-title">
 <hr class="divider">
+<figure class="section-visual" aria-label="AI 採用的三大階段分佈主視覺">
+  <img class="section-visual-image-light" src="assets/adoption-stages-hero.svg" alt="以三段堆疊長條呈現 AI 採用從探索評估、局部試行到深度整合的主視覺">
+  <img class="section-visual-image-dark" src="assets/adoption-stages-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text section-heading-text-wide">
     <h2 class="section-title" id="adoption-stages-title"><span class="section-title-icon" aria-hidden="true">stacked_bar_chart</span>AI 採用的三大階段分佈</h2>
@@ -1354,6 +1413,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 
 <section class="analysis-section" id="industry-clusters" aria-labelledby="industry-clusters-title">
 <hr class="divider">
+<figure class="section-visual" aria-label="產業分群解讀主視覺">
+  <img class="section-visual-image-light" src="assets/industry-clusters-hero.svg" alt="以四象限、節點與連線呈現產業 AI 分群的主視覺">
+  <img class="section-visual-image-dark" src="assets/industry-clusters-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text">
     <h2 class="section-title" id="industry-clusters-title"><span class="section-title-icon" aria-hidden="true">hub</span>產業分群解讀</h2>
@@ -1402,6 +1465,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 
 <section class="analysis-section" id="hybrid-talent" aria-labelledby="hybrid-talent-title">
 <hr class="divider">
+<figure class="section-visual" aria-label="重構人才定義主視覺">
+  <img class="section-visual-image-light" src="assets/hybrid-talent-hero.svg" alt="以中心節點連接多個職能模組，呈現混合型人才重新編排工作流程的主視覺">
+  <img class="section-visual-image-dark" src="assets/hybrid-talent-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text">
     <h2 class="section-title" id="hybrid-talent-title"><span class="section-title-icon" aria-hidden="true">psychology</span>重構人才定義</h2>
@@ -1441,6 +1508,10 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
 
 <section class="analysis-section" id="hybrid-influence" aria-labelledby="hybrid-influence-title">
 <hr class="divider">
+<figure class="section-visual" aria-label="混合型職能發展能力主視覺">
+  <img class="section-visual-image-light" src="assets/hybrid-influence-hero.svg" alt="以雷達圖、層級節點與能力連線呈現混合型職能發展能力的主視覺">
+  <img class="section-visual-image-dark" src="assets/hybrid-influence-hero-dark.svg" alt="" aria-hidden="true">
+</figure>
 <div class="section-heading">
   <div class="section-heading-text">
     <h2 class="section-title" id="hybrid-influence-title"><span class="section-title-icon" aria-hidden="true">account_tree</span>混合型職能發展能力</h2>
@@ -1652,7 +1723,7 @@ body.drawer-open .drawer-backdrop { opacity: 1; pointer-events: auto; }
     <section class="footer-panel" aria-labelledby="copyright-title">
       <div class="footer-title" id="copyright-title">版權宣告</div>
       <div class="footer-copy">
-        本頁內容由 Dino 整理與改寫，僅供產業研究、簡報討論與內部決策參考。外部資料、商標與報告內容之著作權歸原權利人所有；本頁新增的中文分析文字、資料編排與視覺化設計，未經授權請勿整頁轉載、商業散布或移除來源標註。引用本頁觀點時，請保留頁名「AI 對產業的數據觀察」、發布日期 <span data-footer-version-date>2026-07-13</span>、版號 <span data-footer-version-number>v2026.07.13-1</span>。
+        本頁內容由 Dino 整理與改寫，僅供產業研究、簡報討論與內部決策參考。外部資料、商標與報告內容之著作權歸原權利人所有；本頁新增的中文分析文字、資料編排與視覺化設計，未經授權請勿整頁轉載、商業散布或移除來源標註。引用本頁觀點時，請保留頁名「AI 對產業的數據觀察」、發布日期 <span data-footer-version-date>2026-07-14</span>、版號 <span data-footer-version-number>v2026.07.14-1</span>。
       </div>
     </section>
     <section class="footer-panel" aria-labelledby="error-report-title">
