@@ -1,0 +1,26 @@
+name: Validate AI Data
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-aidata-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Validate static site
+        run: node --test tests/site.test.mjs

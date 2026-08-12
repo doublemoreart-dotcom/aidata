@@ -1,0 +1,9 @@
+{
+  "name": "aidata",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --test tests/site.test.mjs",
+    "test": "node --test tests/site.test.mjs"
+  }
+}
